@@ -16,7 +16,7 @@
 ---
 
 ### 🔔 检查TG通知是否成功
-访问以下URL（替换参数）：  
+访问以下URL，在你的worker域名后加/tg若配置成功Tg机器人会给你发送签到消息（替换参数）：  
 `https://jeffern.workers.dev/tg`  
 - `TGID`：通过Telegram关注 [@XiaoGuiDangJia_ID_BOT](https://t.me/XiaoGuiDangJia_ID_BOT) 获取  
 - `TGTOKEN`：通过 [@BotFather](https://t.me/BotFather) 申请新机器人获取  

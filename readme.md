@@ -64,7 +64,7 @@ Cloudflare 使用 UTC 时间（北京时间 = UTC +8）！
 ---
 
 ## 🔧 其他项目
-如果机场不支持网页API签到，可尝试一下项目，通过Python脚本自动签到telegram机器人：  
+如果机场不支持网页API签到，可尝试以下项目，通过Python脚本自动签到telegram机器人：  
 [Telegram-bot-auto-checkin](https://github.com/jeffernn/Telegram-bot-auto-checkin)
 
 ---

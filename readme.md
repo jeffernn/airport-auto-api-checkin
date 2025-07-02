@@ -1,38 +1,71 @@
-本脚本适用于使用SSPANEL搭建的机场，因为API地址使用的都是一样的，其他模版搭建的可以参考此方法，只需要修改以下登陆和签到API地址即可实现自动签到；
-⚠️：cloudflare的worker被墙，首次测试需代理，后期无需，若使用cloudflare的代理请换其他代理，因为cloudflare无法给cloudflare自身代理
+# SSPanel 自动签到脚本
 
-🚀 使用方法：
-项目案例地址: jeffern.workers.dev
+本脚本适用于使用SSPANEL搭建的机场，其他模板搭建的可以参考此方法，只需修改登录和签到API地址即可实现自动签到。
 
-🔔 检查 TG 通知是否成功
-访问 https://jeffern.workers.dev/tg
-其中的TGID可以打开Telegram，关注@XiaoGuiDangJia_ID_BOT机器人获取
-其中TGTOKEN关注@BotFather机器人申请新的机器人获取
+⚠️ **注意**  
+Cloudflare的Worker被墙，首次测试需代理（后期无需）。若使用Cloudflare代理请换其他代理，因为Cloudflare无法给自身代理。
 
-👋 手动签到（验证是否签到成功）
-示例机场密码: password
-访问 https://jeffern.workers.dev/password
-查看worker返回的信息
+---
 
+## 🚀 使用方法
 
-⏰ 设置自动签到
-前往 设置 > 触发事件 > +添加 > Cron 触发器
-选择 每天 和 00:00（建议根据需求调整时间）
-点击 添加 完成设置
-⚠️Attation:
-请注意，Cloudflare 使用的是 UTC 标准时间，与北京时间有 8 小时的时差！
+**项目案例地址**:  
+[https://jeffern.workers.dev](https://jeffern.workers.dev)
 
-📋 相关环境变量说明
+---
 
-变量名	      示例	                                必填	     备注
-JC/DOMAIN	 ikuuu.one       	                     ✅	    机场域名
-ZH/USER	   jeffern@google.com	                   ✅	    机场账户邮箱
-MM/PASS   	password            	               ✅	    机场账户密码
-TGID	     6946912345                           ❌ 接收 TG 通知的账户数字 ID
-TGTOKEN	6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXX	 ❌	发送 TG 通知的机器人 token
- 👋脚本执行返回的数据
- <img width="1058" alt="image" src="https://github.com/user-attachments/assets/858f1ed3-53b3-4de4-9770-fbbdb82afd8b" />
-机场签到后可能不会返回一些流量的相关字段，不过没关系，识别不到默认改为未知，需要增加或删除字段可以看代码中checkin部分，有些机场不支持网页的api签到可以移步到本人仓库的另外一个项目
-项目地址：https://github.com/jeffernn/Telegram-bot-auto-checkin
-##警告⚠️
-若使用本人脚本导致被API滥用触发封号规则与本人无关，后果自负，本项目为教学项目，请下载后24小时内删除
+### 🔔 检查TG通知是否成功
+访问以下URL（替换参数）：  
+`https://jeffern.workers.dev/tg`  
+- `TGID`：通过Telegram关注 [@XiaoGuiDangJia_ID_BOT](https://t.me/XiaoGuiDangJia_ID_BOT) 获取  
+- `TGTOKEN`：通过 [@BotFather](https://t.me/BotFather) 申请新机器人获取  
+
+---
+
+### 👋 手动签到（验证是否成功）
+示例机场密码: `password`  
+访问：  
+`https://jeffern.workers.dev/password`  
+查看Worker返回的信息。
+
+---
+
+### ⏰ 设置自动签到
+1. 前往 Cloudflare Workers 控制台  
+2. 进入 **设置 > 触发事件 > +添加 > Cron 触发器**  
+3. 选择 **每天** 和 **00:00**（建议根据需求调整时间）  
+4. 点击 **添加** 完成设置  
+
+⚠️ **注意时区**  
+Cloudflare 使用 UTC 时间（北京时间 = UTC +8）！
+
+---
+
+## 📋 环境变量配置
+
+| 变量名       | 示例值                      | 必填 | 备注                          |
+|--------------|----------------------------|------|-------------------------------|
+| `JC_DOMAIN`  | `ikuuu.one`                | ✅   | 机场域名                      |
+| `ZH_USER`    | `jeffern@google.com`       | ✅   | 机场账户邮箱                  |
+| `MM_PASS`    | `password`                 | ✅   | 机场账户密码                  |
+| `TGID`       | `6946912345`               | ❌   | 接收通知的Telegram账户ID      |
+| `TGTOKEN`    | `6894123456:XXXX...`       | ❌   | Telegram机器人Token           |
+
+---
+
+## 📊 脚本执行示例
+![返回数据示例](https://github.com/user-attachments/assets/858f1ed3-53b3-4de4-9770-fbbdb82afd8b)
+
+> 注：部分机场可能不返回流量字段，识别不到会显示"未知"。如需修改字段，请调整代码中的`checkin`部分。
+
+---
+
+## 🔧 其他项目
+如果机场不支持网页API签到，可尝试：  
+[Telegram-bot-auto-checkin](https://github.com/jeffernn/Telegram-bot-auto-checkin)
+
+---
+
+## ⚠️ 警告
+**使用本脚本可能导致因API滥用触发封号规则，后果自负**  
+本项目仅供教学使用，请下载后24小时内删除。

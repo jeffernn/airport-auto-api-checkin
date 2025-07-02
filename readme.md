@@ -34,3 +34,5 @@ TGTOKEN	6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXX	 ❌	发送 TG 通知的机器人
  <img width="1058" alt="image" src="https://github.com/user-attachments/assets/858f1ed3-53b3-4de4-9770-fbbdb82afd8b" />
 机场签到后可能不会返回一些流量的相关字段，不过没关系，识别不到默认改为未知，需要增加或删除字段可以看代码中checkin部分，有些机场不支持网页的api签到可以移步到本人仓库的另外一个项目
 项目地址：https://github.com/jeffernn/Telegram-bot-auto-checkin
+##警告⚠️
+若使用本人脚本导致被API滥用触发封号规则与本人无关，后果自负，本项目为教学项目，请下载后24小时内删除

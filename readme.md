@@ -4,6 +4,7 @@
 
 ⚠️ **注意**  
 Cloudflare的Worker被墙，首次测试需代理（后期无需）。若使用Cloudflare代理请换其他代理，因为Cloudflare无法给自身代理。
+需要配置telegram机器人才可以签到成功后telegram机器人才会自动通知你
 
 ---
 
@@ -55,6 +56,8 @@ Cloudflare 使用 UTC 时间（北京时间 = UTC +8）！
 
 ## 📊 脚本执行示例
 ![返回数据示例](https://github.com/user-attachments/assets/858f1ed3-53b3-4de4-9770-fbbdb82afd8b)
+![IMG_8686](https://github.com/user-attachments/assets/52b736bf-7753-4dd2-9579-dbf927a253a0)
+
 
 > 注：部分机场可能不返回流量字段，识别不到会显示"未知"。如需修改字段，请调整代码中的`checkin`部分。
 

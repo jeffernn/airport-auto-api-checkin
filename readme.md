@@ -46,9 +46,9 @@ Cloudflare 使用 UTC 时间（北京时间 = UTC +8）！
 
 | 变量名       | 示例值                      | 必填 | 备注                          |
 |--------------|----------------------------|------|-------------------------------|
-| `JC_DOMAIN`  | `ikuuu.one`                | ✅   | 机场域名                      |
-| `ZH_USER`    | `jeffern@google.com`       | ✅   | 机场账户邮箱                  |
-| `MM_PASS`    | `password`                 | ✅   | 机场账户密码                  |
+| `JC`  | `ikuuu.one`                | ✅   | 机场域名                      |
+| `ZH`    | `jeffern@google.com`       | ✅   | 机场账户邮箱                  |
+| `MM`    | `password`                 | ✅   | 机场账户密码                  |
 | `TGID`       | `6946912345`               | ❌   | 接收通知的Telegram账户ID      |
 | `TGTOKEN`    | `6894123456:XXXX...`       | ❌   | Telegram机器人Token           |
 

@@ -1,10 +1,10 @@
 # SSPanel 自动签到脚本
 
-本脚本适用于使用SSPANEL搭建的机场，此模版搭建的可以参考此方法，只需修改登录和签到API地址即可实现自动签到。
+本脚本适用于使用SSPANEL搭建的机场(可能不适用于v2board搭建机场，因为Api地址不一样，可自行抓包替换，只需修改登录和签到API地址即可实现自动签到）
 
 ⚠️ **注意**  
-Cloudflare的Worker被墙，首次测试需代理（后期无需）。若使用Cloudflare代理请换其他代理，因为Cloudflare无法给自身代理。
-需要配置telegram机器人才可以签到成功后telegram机器人才会自动通知你
+由于Cloudflare的Worker分配的网址默认被墙，首次测试打卡是否成功需代理（后期无需）。若使用Cloudflare代理请换其他代理，因为Cloudflare无法给自身代理。
+只有配置telegram机器人后才可以签到成功后telegram机器人自动通知
 
 ---
 
@@ -59,16 +59,18 @@ Cloudflare 使用 UTC 时间（北京时间 = UTC +8）！
 ![IMG_8686](https://github.com/user-attachments/assets/52b736bf-7753-4dd2-9579-dbf927a253a0)
 
 
-> 注：部分机场可能不返回流量字段，识别不到会显示"未知"。如需修改字段，请调整代码中的`checkin`部分。
+> 注：部分机场可能不返回流量字段，识别不到会显示"未知"（不影响使用）。如需修改发送给机器人的字段，请调整代码中的`checkin`部分。
 
 ---
 
 ## 🔧 其他项目
-如果机场不支持网页API签到，可尝试：  
+如果机场不支持网页API签到，可尝试一下项目，通过Python脚本自动签到telegram机器人：  
 [Telegram-bot-auto-checkin](https://github.com/jeffernn/Telegram-bot-auto-checkin)
 
 ---
 
 ## ⚠️ 警告
 **使用本脚本可能导致因API滥用触发封号规则，后果自负**  
+如果你觉得本项目对你有帮助，请点一个Star🌟
+本项目由Jeffern维护
 本项目仅供教学使用，请下载后24小时内删除。
